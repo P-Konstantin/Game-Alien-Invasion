@@ -6,8 +6,6 @@ import pygame
 from bullet import Bullet
 from alien import Alien
 
-# Запускаем pygame
-pygame.init()
 
 def check_keydown_events(event, ai_settings, stats, screen, ship, bullets):
     """Реагирует на нажатие клавиши."""
@@ -131,7 +129,7 @@ def fire_bullet(ai_settings, screen, ship, bullets):
         bullets.add(new_bullet)
 
 def get_number_aliens_x(ai_settings, alien_width):
-    """Вычисляет количесвто пришельцев в ряду."""
+    """Вычисляет количество пришельцев в ряду."""
     available_space_x = ai_settings.screen_width - 2 * alien_width
     number_aliens_x = int(available_space_x / (2 * alien_width))
     return  number_aliens_x
